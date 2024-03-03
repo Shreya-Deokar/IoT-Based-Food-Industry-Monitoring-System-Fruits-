@@ -5,8 +5,8 @@
 TinyGPSPlus gps;  // The TinyGPS++ object
 SoftwareSerial ss(16, 17); // The serial connection to the GPS device
 
-const char* ssid = "Rushi pg1";
-const char* password = "Rushi@1234";
+const char* ssid = "";
+const char* password = "";
 
 float latitude , longitude;
 int year , month , date, hour , minute , second;

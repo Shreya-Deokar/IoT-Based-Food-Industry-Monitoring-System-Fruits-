@@ -1,5 +1,5 @@
-broker_host = "192.168.77.67"
+broker_host = ""
 port_name = 1883
-channelName1 = "cdac/diot"
+channelName1 = "topic"
 keep_alive = 60
 qos = 0

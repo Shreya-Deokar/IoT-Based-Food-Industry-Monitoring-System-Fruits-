@@ -33,8 +33,8 @@ def on_message(client, userdata, msg):
         print(gas_data)
         print(current_time)
         cnx = mysql.connector.connect(
-            user = "shivam",
-            passwd = "shivam",
+            user = "",
+            passwd = "",
             host = "localhost",
             database = "sensor"
         )

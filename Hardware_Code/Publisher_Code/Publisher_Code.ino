@@ -4,15 +4,15 @@
 #include "MQ135.h"
 
 // WiFi credentials
-const char* ssid = "acts";
+const char* ssid = "";
 const char* password = "";
 
 // ThingsBoard MQTT parameters
 const char* mqttServer = "mqtt.thingsboard.cloud"; 
 const int mqttPort = 1883;
-const char* mqttUsername = "w4M3bPoLrKKfIszngIy3";
+const char* mqttUsername = "";
 
-const char* mqttServer1 = "192.168.77.67"; 
+const char* mqttServer1 = ""; 
 const int mqttPort1 = 1883;
 const char* mqttClientID = "";
 
@@ -75,11 +75,11 @@ void loop() {
   if(temperature > 30 || humidity > 50 || sensor_Aout > 50)
   {
     client.publish("v1/devices/me/telemetry", payload.c_str());
-    client1.publish("cdac/diot", payload.c_str());    
+    client1.publish("topic", payload.c_str());    
   }
   else
   {
-    client1.publish("cdac/diot", payload.c_str());  
+    client1.publish("topic", payload.c_str());  
   }
 
   Serial.println("Temperature: " + String(temperature) + " °C, Humidity: " + String(humidity) + " %" + " Gas: " + String(sensor_Aout));
